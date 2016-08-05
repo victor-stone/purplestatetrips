@@ -12,3 +12,5 @@ gulp.task( 'js', () => {
       .pipe(source('purplestatetrips.js'))
       .pipe(gulp.dest('public/js'));
   });
+
+gulp.task('default',['js']);
