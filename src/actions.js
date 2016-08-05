@@ -1,18 +1,18 @@
-import actions      from './action-constants';
+import ac      from './action-constants';
 
 module.exports = {
   
-  showRow: (id) => {
-    return {
-      type: actions.SHOW_ROW,
-      id
-    };
-  },
-
   showList: () => {
     return {
-      type: actions.SHOW_LIST
+      type: ac.verify(ac.SHOW_LIST)
     } ;
+  },
+
+  selectRow: (selectedRow) => {
+    return {
+      type: ac.verify(ac.SELECT_ROW),
+      selectedRow
+    };
   },
 
   showNextPage: (paging) => {

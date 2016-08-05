@@ -13,7 +13,11 @@ const data = (state={},action) => {
         }
         return row;
       });
-      return { columns, rows };
+      return { ...state, columns, rows };
+    }
+    case ac.SELECT_ROW: {
+      let { selectedRow } = action;
+      return { ...state, selectedRow };
     }
     default: {
       return state;

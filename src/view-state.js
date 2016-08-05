@@ -1,17 +1,17 @@
 import ac from './action-constants';
 
 const defaultView = {
-  view: ac.SHOW_ALL,
+  open: ac.SHOW_LIST,
 };
 
 module.exports = (state = defaultView, action ) => {
-  const { type:view, id } = action;
-  switch( view ) {
-    case ac.SHOW_ALL: {
-      return { view };
+  const { type:open, id } = action;
+  switch( open ) {
+    case ac.verify(ac.SHOW_LIST): {
+      return { ...state, open };
     }
-    case ac.SHOW_ROW: {
-      return { view, id };
+    case ac.verify(ac.SELECT_ROW): {
+      return { open, id };
     }
     default: {
       return state;

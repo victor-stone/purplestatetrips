@@ -30,7 +30,8 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "redux": "^3.5.2",
-    "request": "^2.74.0"
+    "request": "^2.74.0",
+    "vanilla": "git+https://github.com/victor-stone/vanilla.git"
   },
   "devDependencies": {
     "babel-core": "^6.13.1",
